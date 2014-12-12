@@ -20,6 +20,7 @@ append_if_exist(SOURCES
   ${PROTOBUF_ROOT}/src/google/protobuf/io/zero_copy_stream.cc
   ${PROTOBUF_ROOT}/src/google/protobuf/io/zero_copy_stream_impl.cc
   ${PROTOBUF_ROOT}/src/google/protobuf/io/zero_copy_stream_impl_lite.cc
+  ${PROTOBUF_ROOT}/src/google/protobuf/io/strtod.cc
   ${PROTOBUF_ROOT}/src/google/protobuf/message.cc
   ${PROTOBUF_ROOT}/src/google/protobuf/message_lite.cc
   ${PROTOBUF_ROOT}/src/google/protobuf/reflection_ops.cc
@@ -37,7 +38,6 @@ append_if_exist(SOURCES
   ${PROTOBUF_ROOT}/src/google/protobuf/unknown_field_set.cc
   ${PROTOBUF_ROOT}/src/google/protobuf/wire_format.cc
   ${PROTOBUF_ROOT}/src/google/protobuf/wire_format_lite.cc
-#  ${PROTOBUF_ROOT}/src/google/protobuf/stubs/hash.cc
 )
 
 if(WIN32 AND BUILD_SHARED_LIBS AND MSVC)
@@ -86,6 +86,7 @@ append_if_exist(INSTALL_FILES_LIST
     ${PROTOBUF_ROOT}/src/google/protobuf/io/coded_stream.h
     ${PROTOBUF_ROOT}/src/google/protobuf/io/gzip_stream.h
     ${PROTOBUF_ROOT}/src/google/protobuf/io/printer.h
+    ${PROTOBUF_ROOT}/src/google/protobuf/io/strtod.h
     ${PROTOBUF_ROOT}/src/google/protobuf/io/tokenizer.h
     ${PROTOBUF_ROOT}/src/google/protobuf/io/zero_copy_stream.h
     ${PROTOBUF_ROOT}/src/google/protobuf/io/zero_copy_stream_impl.h
@@ -105,8 +106,14 @@ append_if_exist(INSTALL_FILES_LIST
     ${PROTOBUF_ROOT}/src/google/protobuf/stubs/atomicops_internals_x86_gcc.h
     ${PROTOBUF_ROOT}/src/google/protobuf/stubs/atomicops_internals_x86_msvc.h
     ${PROTOBUF_ROOT}/src/google/protobuf/stubs/common.h
+    ${PROTOBUF_ROOT}/src/google/protobuf/stubs/hash.h
+    ${PROTOBUF_ROOT}/src/google/protobuf/stubs/map_util.h
     ${PROTOBUF_ROOT}/src/google/protobuf/stubs/once.h
     ${PROTOBUF_ROOT}/src/google/protobuf/stubs/platform_macros.h
+    ${PROTOBUF_ROOT}/src/google/protobuf/stubs/stl_util.h
+    ${PROTOBUF_ROOT}/src/google/protobuf/stubs/stringprintf.h
+    ${PROTOBUF_ROOT}/src/google/protobuf/stubs/strutil.h
+    ${PROTOBUF_ROOT}/src/google/protobuf/stubs/substitute.h
     ${PROTOBUF_ROOT}/src/google/protobuf/stubs/template_util.h
     ${PROTOBUF_ROOT}/src/google/protobuf/stubs/type_traits.h
     ${PROTOBUF_ROOT}/src/google/protobuf/text_format.h
