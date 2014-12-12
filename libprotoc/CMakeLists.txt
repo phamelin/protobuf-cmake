@@ -46,6 +46,10 @@ if(WIN32 AND BUILD_SHARED_LIBS AND MSVC)
     add_definitions("-DLIBPROTOC_EXPORTS")
 endif()
 
+if(WIN32)
+    set(CMAKE_DEBUG_POSTFIX "_d")
+endif()
+
 add_library( libprotoc ${SOURCES} )
 target_link_libraries( libprotoc libprotobuf )
 set_target_properties(libprotoc PROPERTIES OUTPUT_NAME "protoc")
